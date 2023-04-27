@@ -1,11 +1,98 @@
 :root {
-    --primary-100: #674AB5;
-    --primary-200: #B5674A;
-    --primary-300: #4AB567;
+  --primary-100: #674ab5;
+  --primary-200: #b5674a;
+  --primary-300: #4ab567;
 
-    /* complementary colours */
-    --secondary-100: #98B54A;
-    --secondary-100: #4A98B5;
-    --secondary-100: #B54A98;
-    
+  /* complementary colours */
+  --secondary-100: #98b54a;
+  --secondary-100: #4a98b5;
+  --secondary-100: #b54a98;
+
+  --grey: #7f7f80;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background: #000;
+}
+
+/* Responsive Styles */
+.grid-container {
+  display: grid;
+  place-items: center;
+  align-items: center;
+
+  grid-template-rows: 70vh;
+  grid-template-columns: 100vw;
+
+  /* grid-auto-flow: column;
+      grid-auto-columns: 100vw;
+      grid-auto-rows: 75vw; */
+
+  gap: 10px 15px;
+  border: 2px solid #fff;
+  background: url("https://initiate.alphacoders.com/images/329/cropped-1920-1080-329544.jpg?6868");
+}
+
+.grid-item {
+  border: 1px solid #fff;
+  padding: 2rem;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Navbar */
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  display: grid;
+  align-items: center;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  width: 50%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.grid-item-header:hover {
+  transform: scale(1.4);
+}
+
+#info-page {
+  grid-template-rows: 30% 100vh;
+  grid-template-columns: 100%;
+  background: var(--grey);
+}
+
+#info-page h3 {
+  text-align: center;
+  font-size: 2rem;
 }
