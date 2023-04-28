@@ -1,21 +1,22 @@
 :root {
-  --primary-100: #674ab5;
-  --primary-200: #b5674a;
-  --primary-300: #4ab567;
+  --primary-100: #e70403;
+  --primary-200: #f8e5b3;
+  --primary-300: #497b77;
 
   /* complementary colours */
-  --secondary-100: #98b54a;
-  --secondary-100: #4a98b5;
-  --secondary-100: #b54a98;
+  --secondary-100: #03E6E7;
+  --secondary-100: #B3C6F8;
+  --secondary-100: #7B494D;
 
   --grey: #7f7f80;
+  --light-grey: #7b8482;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Poppins, sans-serif;
-  color: white;
+  color: #fff;
   background: #000;
 }
 
@@ -28,13 +29,9 @@ body {
   grid-template-rows: 70vh;
   grid-template-columns: 100vw;
 
-  /* grid-auto-flow: column;
-      grid-auto-columns: 100vw;
-      grid-auto-rows: 75vw; */
-
   gap: 10px 15px;
   border: 2px solid #fff;
-  background: url("https://initiate.alphacoders.com/images/329/cropped-1920-1080-329544.jpg?6868");
+  background: url("https://initiate.alphacoders.com/images/153/cropped-1920-1080-153245.png?7789");
 }
 
 .grid-item {
@@ -57,26 +54,35 @@ body {
   text-transform: uppercase;
 }
 
+.grid-item-header {
+  background: rgb(0, 0, 0, .4);
+  border: none;
+}
+
 /* Navbar */
 
 #navbar {
   overflow: hidden;
+  margin-left: 2rem;
 }
 
 #navbar a {
-  background-color: #333;
-  float: left;
   display: block;
+  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px;
   text-decoration: none;
   margin-right: 10px;
-  border: 1px solid white;
+  border-radius: 0.9em;
+  box-shadow: #000;
+  font-size: 1.5em;
+  /* border: 1px solid white; */
+  /* background-color: #333; */
 }
 
 #navbar a:hover {
-  background: var(--grey);
+  background: rgb(127, 127, 128, 0.3);
 }
 
 main .content {
@@ -84,16 +90,16 @@ main .content {
 }
 
 .sticky {
-  background-color: #333;
-  font-size: 1.1em;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 1.1em;
   align-items: center;
   place-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   top: 0;
   width: 50%;
   padding: 10px;
+  background-color: rgb(51, 51, 51, 0.3);
   /* border: 1px solid white; */
 }
 
@@ -101,17 +107,13 @@ main .content {
   padding-top: 60px;
 }
 
-.grid-item-header:hover {
-  transform: scale(1.4);
-}
-
-#info-page {
+#intro-section {
   grid-template-rows: 30% 100vh;
   grid-template-columns: 100%;
-  background: var(--grey);
+  background: #000;
 }
 
-#info-page h3 {
+#intro-section h3 {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.5em;
