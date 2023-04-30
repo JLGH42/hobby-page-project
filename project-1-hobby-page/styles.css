@@ -12,6 +12,11 @@
   --light-grey: #7b8482;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, auto);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -29,7 +34,7 @@ body {
   grid-template-rows: 70vh;
   grid-template-columns: 100vw;
 
-  gap: 10px 15px;
+  /* gap: 10px 15px; */
   border: 2px solid #fff;
   background: url("/project-1-hobby-page/images/light-yagami-background.png");
 }
@@ -82,10 +87,9 @@ body {
   background: rgb(73, 123, 119, .3);
 }
 
-main.content {
-  /* padding: 16px; */
-  margin-top: 16px;
-}
+/* main.content {
+
+} */
 
 .sticky {
   display: grid;
