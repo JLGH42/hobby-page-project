@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: Poppins, sans-serif;
   color: #fff;
   background: #000;
@@ -29,13 +29,8 @@ body {
 
 .grid-container {
   display: grid;
-  place-items: center;
-  align-items: center;
-  grid-template-rows: 70vh;
-  grid-template-columns: 100vw;
   gap: 0px;
   border: 2px solid #fff;
-  background: url("./images/light-yagami-background.png");
 }
 
 .grid-item {
@@ -44,6 +39,19 @@ body {
   padding: 2rem;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+#section-title {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  place-items: center;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  z-index: 0;
+  place-self: center;
+  border: none;
 }
 
 /* Navbar */
@@ -60,6 +68,7 @@ body {
 
 #navbar {
   display: grid;
+  place-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow: hidden;
   z-index: 1;
@@ -75,7 +84,7 @@ body {
   margin-right: 10px;
   border-radius: 0.9em;
   box-shadow: #000;
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   font-size: 1.2rem;
 }
 
@@ -115,6 +124,14 @@ body {
 
 /* banner */
 
+#banner {
+  place-items: center;
+  align-items: center;
+  grid-template-rows: 70vh;
+  grid-template-columns: 100vw;
+  background: url("./images/light-yagami-background.png");
+}
+
 .banner-header {
   background: rgb(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -137,23 +154,13 @@ body {
 /* Intro */
 
 #intro-section {
-  position: relative;
+  border: none;
   grid-template-rows: repeat(auto, 2fr);
   grid-template-columns: 2fr 1fr;
+  place-items: center;
   gap: 15px;
   padding: 0 2rem;
   background: #000;
-}
-
-#intro-section h2 {
-  position: absolute;
-  top: 7%;
-  left: 20%;
-  text-align: center;
-  font-size: 2.2em;
-  letter-spacing: 0.4rem;
-  text-transform: uppercase;
-  z-index: 0;
 }
 
 #intro-section img {
@@ -164,8 +171,6 @@ body {
   font-size: 1.2em;
 }
 
-.death-note.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  background: rgb(0, 0, 0);
-}
+/* Justice */
+
+#justice-section {}
