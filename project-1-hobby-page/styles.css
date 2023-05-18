@@ -5,8 +5,8 @@
 
   /* complementary colours */
   --secondary-100: #03e6e7;
-  --secondary-100: #b3c6f8;
-  --secondary-100: #7b494d;
+  --secondary-200: #b3c6f8;
+  --secondary-300: #7b494d;
 
   --grey: #7f7f80;
   --light-grey: #7b8482;
@@ -25,6 +25,10 @@ body {
   background: #000;
 }
 
+main.content {
+  padding: 0 2rem;
+}
+
 /* Responsive Styles */
 
 .grid-container {
@@ -34,8 +38,6 @@ body {
 }
 
 .grid-item {
-  /* border: 1px solid #fff; */
-  /* font-size: 1.2em; */
   padding: 2rem;
   margin-left: 0px;
   margin-right: 0px;
@@ -50,7 +52,6 @@ body {
   letter-spacing: 0.4rem;
   text-transform: uppercase;
   z-index: 0;
-  place-self: center;
   border: none;
 }
 
@@ -84,7 +85,6 @@ body {
   margin-right: 10px;
   border-radius: 0.9em;
   box-shadow: #000;
-  /* width: -webkit-fill-available; */
   font-size: 1.2rem;
 }
 
@@ -92,10 +92,6 @@ body {
   background: rgb(73, 123, 119, 0.3);
   color: var(--primary-100);
 }
-
-/* main.content {
-
-} */
 
 .sticky {
   display: grid;
@@ -159,7 +155,6 @@ body {
   grid-template-columns: 2fr 1fr;
   place-items: center;
   gap: 15px;
-  padding: 0 2rem;
   background: #000;
 }
 
@@ -171,6 +166,68 @@ body {
   font-size: 1.2em;
 }
 
+#intro-section .bio figcaption {
+  font-size: 1em;
+}
+
 /* Justice */
 
-#justice-section {}
+#justice-section {
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+  ". . hd hd hd hd hd . ."
+  "sh sh sh . . . . . . "
+  "ct ct ct ct ct ct ct ct ct";
+  place-items: center;
+  padding: 0 2.5rem;
+}
+
+.justice-header {
+  grid-area: hd;
+  place-self: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  z-index: 0;
+  border: none;
+}
+
+.justice-content {
+  grid-area: ct;
+  font-size: 1.2em;
+}
+
+.subheader {
+  grid-area: sh;
+  place-self: start;
+  text-transform: capitalize;
+  margin: 2em 0 0 0;
+  font-size: 1.5rem;
+  width: max-content;
+  text-decoration: underline;
+}
+
+#rules {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  'sh . .'
+  'ct ct img';
+  place-items: center;
+  border: 2px solid var(--secondary-200);
+}
+
+.rules-content {
+  grid-area: ct;
+}
+
+.rules-image {
+  grid-area: img;
+  height: auto;
+  width: 50%;
+  object-fit: fill;
+  padding: 2rem;
+}
+
+
