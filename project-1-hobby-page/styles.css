@@ -63,7 +63,8 @@ main.content {
   border-radius: 2rem;
   margin: 1.2em;
   gap: 0 20px;
-  background-color: rgba(127, 127, 127, .3);
+  background-color: rgba(127, 127, 127, 0.3);
+  place-items: center;
 }
 
 .card-alt {
@@ -75,12 +76,32 @@ main.content {
   gap: 0 20px;
 }
 
+.card-vert img {
+  place-self: start;
+}
+
 .card-image {
   grid-area: img;
 }
 
 .card-content {
   grid-area: ct;
+}
+
+.vert-cards {
+  grid-template-columns: repeat(3, .5fr);
+  grid-auto-rows: auto;
+  border: 2px solid var(--secondary-200);
+  border-radius: 2rem;
+  padding: 0;
+  gap: 0 20px;
+}
+
+.vert-card {
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .subheader {
@@ -276,4 +297,49 @@ hr {
 
 .events article:first-child .card-content {
   place-self: start;
+}
+
+/* consequences */
+
+#consequences-section {
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    ". . hd hd hd hd hd . ."
+    "sh sh sh . . . . . . "
+    "ct ct ct ct ct ct ct ct ct";
+  place-content: center;
+  border: none;
+}
+
+.consequences-header {
+  grid-area: hd;
+  place-self: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  z-index: 0;
+  border: none;
+}
+
+.consequences-content {
+  grid-area: ct;
+  font-size: 1.2rem;
+}
+
+#consequences-section .vert-cards .vert-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+}
+
+#consequences-section .vert-cards .vert-card .subheader {
+  margin-top: 1rem;
+}
+
+#consequences-section .card .card-image {
+  width: 30vmax;
+  height: auto;
+  place-self: center;
 }
